@@ -9,3 +9,11 @@ require('./examples/05-bounded-polymorphism/index');
 require('./examples/06-arrays/index');
 require('./examples/gotchas/index');
 require('./examples/react/index');
+
+console.log(
+    '\n\n',
+    'DONE!',
+    '\n',
+    "^^^^^ If you don't see this, there was an unhandled JS exception.",
+    '\n\n '
+);

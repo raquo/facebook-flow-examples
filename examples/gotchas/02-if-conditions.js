@@ -23,8 +23,13 @@ msg.bar = 'bar';
 // #FlowExpectError - Error because foo property does not exist
 msg.isBig = (msg.foo === 'bar');
 
-// #FlowExpectError - Error because foo property does not exist, let alone foo.bar
-msg.isBig = (msg.foo.bar === 255);
+try {
+    // #FlowExpectError - Error because foo property does not exist, let alone foo.bar
+    msg.isBig = (msg.foo.bar === 255);
+} catch (e) {
+    console.warn('JS exception:');
+    console.error(e);
+}
 
 // #FlowExpectError - Error because foo property does not exist
 printMessage(msg.foo);
@@ -56,11 +61,16 @@ if (msg.foo === 'red') {
 }
 
 // #FlowExpectError – as of Flow v0.21.0, this produces an error! Yay!
-if (msg.foo.bar === 255) {
-    console.log('foo.bar is 255');
-}
-
-// #FlowExpectError – as of Flow v0.21.0, this produces an error! Yay!
 if (msg.foo > 5) {
     console.log('foo is biiiig');
+}
+
+try {
+    // #FlowExpectError – as of Flow v0.21.0, this produces an error! Yay!
+    if (msg.foo.bar === 255) {
+        console.log('foo.bar is 255');
+    }
+} catch (e) {
+    console.warn('JS exception:');
+    console.error(e);
 }

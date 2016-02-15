@@ -30,7 +30,7 @@ The `flow` command merely validates the source code, but how to we run it in the
 
 To run our code, run `npm run start` and point your browser to [localhost:3000](http://localhost:3000). You won't see much since my code doesn't print out much.
 
-I'm using a simple Webpack config to pack my code for the browser and run a local dev server. I have another repo, [minimal-hapi-react-webpack](https://github.com/raquo/minimal-hapi-react-webpack) that explains how to configure Webpack.
+I'm using a simple Webpack config to pack my code for the browser and run a local dev server. I have another repo, [minimal-hapi-react-webpack](https://github.com/raquo/minimal-hapi-react-webpack) that explains how to configure Webpack with more goodies.
 
 Flow is an extension of Javascript, so tools that normally operate on JS files will probably not work on raw Flow files. For example, I'm using ESLint to type check this repo, and have set it up with `babel-eslint` parser. That works, except one of those tools seems to have a problem with Flow's type annotations for fat arrow functions. You'll see one parse error if you run `npm run lint`, but other files are linted properly. **TODO:** Figure out what's up with ESLint.
 
@@ -43,3 +43,12 @@ Right now it's rather hard to find materials on Flow online. The most useful res
 ## License
 
 [MIT](https://github.com/raquo/facebook-flow-examples/blob/master/LICENSE.md). Don't spend it all in one place.
+
+
+## Author
+
+Nikita Gazarov
+
+[nikita@raquo.com](mailto:nikita@raquo.com)
+
+[@raquo](https://twitter.com/raquo)

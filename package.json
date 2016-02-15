@@ -3,16 +3,20 @@
   "version": "0.0.1",
   "description": "Facebook Flow examples",
   "main": "index.js",
-  "author": "Nikita Gazarov",
+  "author": "Nikita Gazarov <nikita@raquo.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raquo/minimal-hapi-react-webpack"
+  },
   "scripts": {
     "start": "./node_modules/.bin/webpack-dev-server --config webpack-config.js --progress",
     "build": "./node_modules/.bin/webpack --config webpack-config.js --progress",
     "lint": "eslint . --ext .js --ext .jsx"
   },
   "dependencies": {
-    "react": "^0.14.3",
-    "react-dom": "^0.14.3"
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7"
   },
   "devDependencies": {
     "babel-core": "^6.5.2",
@@ -25,8 +29,6 @@
     "eslint": "^2.0.0",
     "eslint-plugin-react": "^3.16.1",
     "html-webpack-plugin": "^1.7.0",
-    "react": "^0.14.7",
-    "react-dom": "^0.14.7",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.13",
     "webpack-dev-server": "^1.14.1"
